@@ -59,7 +59,7 @@ def search_keyword(
             abstract_trans = textwrap.wrap(abstract_trans, 40)  # 40行で改行
             abstract_trans = '\n'.join(abstract_trans)
             result = Result(
-                    url=url, title_en=title, title_jp=title_trans, authors, abstract=abstract_trans,
+                    url=url, title_en=title, title_jp=title_trans, authors=authors, abstract=abstract_trans,
                     score=score, words=hit_keywords)
             results.append(result)
     return results
