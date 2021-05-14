@@ -3,12 +3,12 @@ subject: 'cat:cs.*'
 
 # 検索キーワード
 keywords:
-        Symbol Emergence: 10
-        Natural language processing: 10
-        Reinforcement Learning: 10
+        symbol emergence: 10
+        natural language processing: 10
+        reinforcement learning: 10
         
         constructive learning: 5
-        Variational Inference: 5
+        variational inference: 5
         robot: 5
         control: 5
         
