@@ -23,7 +23,7 @@ class Result:
     url: str
     title_en: str
     title_jp: str
-    authors: list
+    authors: str
     abstract: str
     words: list
     score: float = 0.0
@@ -49,7 +49,7 @@ def search_keyword(
     for article in articles:
         url = article['arxiv_url']
         title = article['title']
-        authors = article['authors']
+        authors = article['author']
         abstract = article['summary']
         score, hit_keywords = calc_score(abstract, keywords)
         if (score != 0) and (score >= score_threshold):
