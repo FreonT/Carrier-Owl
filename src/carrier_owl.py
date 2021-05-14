@@ -101,7 +101,7 @@ def notify(results: list, slack_id: str, line_token: str) -> None:
                f'\n url: {url}'\
                f'\n title_en:    {title_en}'\
                f'\n title_jp:    {title_jp}'\
-               f'\n authors:    `{authors}'\
+               f'\n authors:    `{authors}`'\
                f'\n abstract:'\
                f'\n \t {abstract}'\
                f'\n {star}'
