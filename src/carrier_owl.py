@@ -55,15 +55,16 @@ def search_keyword(
         if (score != 0) and (score >= score_threshold):
             title_trans = get_translated_text('ja', 'en', title)
             abstract = abstract.replace('\n', '')
-            abstract_trans = get_translated_text('ja', 'en', abstract)
-            abstract_trans = textwrap.wrap(abstract_trans, 40)  # 40行で改行
-            abstract_trans = '\n'.join(abstract_trans)
+            # abstract_trans = get_translated_text('ja', 'en', abstract)
+            # abstract_trans = textwrap.wrap(abstract_trans, 40)  # 40行で改行
+            # abstract_trans = '\n'.join(abstract_trans)
+            abstract = textwrap.wrap(abstract, 40)  # 40行で改行
+            abstract = '\n'.join(abstract)
             result = Result(
-                    url=url, title_en=title, title_jp=title_trans, authors=authors, abstract=abstract_trans,
+                    url=url, title_en=title, title_jp=title_trans, authors=authors, abstract=abstract,
                     score=score, words=hit_keywords)
             results.append(result)
     return results
-
 
 def send2app(text: str, slack_id: str, line_token: str) -> None:
     # slack
